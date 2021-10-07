@@ -63,6 +63,7 @@ if (!checkFile('./.env', './example.env')) {
 	fs.writeFileSync(file, data);
 
 	console.log('Saved.');
+	console.log('Encryption Key for reference: ' + key);
 	console.log(leeks.colours.yellow('Warning: do not lose your ENV file or encryption key; you will lose access to data in the database.'));
 	console.log('\x07Please set your bot\'s "DISCORD_TOKEN" in "./.env".');
 
