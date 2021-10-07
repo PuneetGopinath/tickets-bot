@@ -44,7 +44,7 @@ const checkFile = (file, example) => {
 	return false;
 };
 
-checkFile('./user/config.js', './user/example.config.js');
+/*checkFile('./user/config.js', './user/example.config.js');
 
 if (!checkFile('./.env', './example.env')) {
 	console.log('Generating database encryption key...');
@@ -68,9 +68,11 @@ if (!checkFile('./.env', './example.env')) {
 	console.log('\x07Please set your bot\'s "DISCORD_TOKEN" in "./.env".');
 
 	process.exit();
-}
+}*/
 
-require('dotenv').config({ path: path('./.env') });
+//require('dotenv').config({ path: path('./.env') });
+
+require('dotenv').config();
 
 require('./banner')();
 
