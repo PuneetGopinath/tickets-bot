@@ -60,7 +60,7 @@ module.exports = async client => {
 		let exit = true;
 		switch(type) {
 			case "mysql":
-				exit = require('./createDb')();
+				exit = require('./createDb')(client);
 				break;
 		}
 		if (exit) return process.exit();
