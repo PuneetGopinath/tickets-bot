@@ -8,4 +8,5 @@ module.exports = (/*client, type*/) => {
         password : process.env.DB_PASS,
     });
     conn.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME};`);
+    return true;
 };
