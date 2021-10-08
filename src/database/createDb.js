@@ -1,6 +1,7 @@
 const mysql = require("mysql2");
-module.exports = (/*client, type*/) => {
+module.exports = (client/*, type*/) => {
     //if (type !== "mysql") return client.log.warn(`${type} db type is not supported for database creation. Currently only mysql is supported`);
+    client.log.debug("Creating db");
     const conn = mysql.createConnection({
         host: process.env.DB_HOST,
         port: process.env.DB_PORT,
