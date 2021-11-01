@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const link = require('terminal-link');
+const link = require("terminal-link");
 const leeks = require('leeks.js');
 
 const {
