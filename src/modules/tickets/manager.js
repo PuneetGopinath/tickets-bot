@@ -57,11 +57,12 @@ module.exports = class TicketManager extends EventEmitter {
 			type: 'GUILD_TEXT'
 		});
 
-		t_channel.permissionOverwrites.edit(creator_id, {
+		await t_channel.permissionOverwrites.create(creator_id, {
 			ATTACH_FILES: true,
 			READ_MESSAGE_HISTORY: true,
 			SEND_MESSAGES: true,
-			VIEW_CHANNEL: true
+			VIEW_CHANNEL: true,
+                        ADD_REACTIONS: true,
 		}, `Ticket channel created by ${creator.user.tag}`);
 
 		const t_row = await this.client.db.models.Ticket.create({
